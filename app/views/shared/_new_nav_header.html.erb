@@ -116,8 +116,9 @@
               </div>
             </a>
           </li>
-          <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/conversations') %>">
-            <a id="global_nav_conversations_link" href="/conversations" class="ic-app-header__menu-list-link">
+
+         <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/resources') %>">
+            <a id="global_nav_conversations_link" href="/resources" class="ic-app-header__menu-list-link">
               <div class="menu-item-icon-container" aria-hidden="true">
                 <%= svg_icon :dashboard %>
                 <span class="menu-item__badge" style="display: none">0</span>
@@ -127,6 +128,14 @@
               </div>
             </a>
           </li>
+
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+          <script type="text/javascript">
+            $('.my-list-item').on('click', function(e){
+              e.preventDefault();
+              console.log('ive been clicked')
+            })
+          </script>
           <% unless @current_user.nil? %>
             <%= render(:partial => 'external_tools/global_nav_menu_items') %>
           <% end %>
