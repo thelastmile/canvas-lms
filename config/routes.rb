@@ -29,6 +29,7 @@ CanvasRails::Application.routes.draw do
 
   get 'resources' => 'resources#show'
   get 'videos' => 'videos#show'
+  get 'support' => 'support#show'
 
   get 'inbox' => 'context#inbox'
   get 'oauth/redirect_proxy' => 'oauth_proxy#redirect_proxy'
