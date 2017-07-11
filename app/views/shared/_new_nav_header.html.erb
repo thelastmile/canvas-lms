@@ -120,7 +120,7 @@
           <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/resources') %>">
             <a id="global_nav_conversations_link" href="/resources" class="ic-app-header__menu-list-link">
               <div class="menu-item-icon-container" aria-hidden="true">
-                <%= svg_icon :dashboard %>
+                <%= svg_icon :resources %>
                 <span class="menu-item__badge" style="display: none">0</span>
               </div>
               <div class="menu-item__text">
@@ -132,7 +132,7 @@
           <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/videos') %>">
             <a id="global_nav_conversations_link" href="/videos" class="ic-app-header__menu-list-link">
               <div class="menu-item-icon-container" aria-hidden="true">
-                <%= svg_icon :dashboard %>
+                <%= svg_icon :videos %>
                 <span class="menu-item__badge" style="display: none">0</span>
               </div>
               <div class="menu-item__text">
@@ -144,7 +144,7 @@
           <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/support') %>">
             <a id="global_nav_conversations_link" href="/support" class="ic-app-header__menu-list-link">
               <div class="menu-item-icon-container" aria-hidden="true">
-                <%= svg_icon :dashboard %>
+                <%= svg_icon :bug %>
                 <span class="menu-item__badge" style="display: none">0</span>
               </div>
               <div class="menu-item__text">
@@ -152,6 +152,16 @@
               </div>
             </a>
           </li>
+
+          <!-- Custom Styles for SVG's -->
+          <style type="text/css">
+            .ic-app-header__menu-list-item--active .ic-icon-svg--resources,
+            .ic-app-header__menu-list-item--active .ic-icon-svg--videos,
+            .ic-app-header__menu-list-item--active .ic-icon-svg--bug {
+              fill: #008EE2;
+            }
+          </style>
+
           <!-- End Custom Sidebar Section -->
           <% unless @current_user.nil? %>
             <%= render(:partial => 'external_tools/global_nav_menu_items') %>

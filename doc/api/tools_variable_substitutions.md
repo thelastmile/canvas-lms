@@ -299,6 +299,15 @@ returns the current course id.
 ```
 1234
 ```
+## vnd.instructure.Course.uuid
+returns the current course uuid.
+
+**Availability**: *when launched in a course*  
+
+
+```
+S3vhRY2pBzG8iPdZ3OBPsPrEnqn5sdRoJOLXGbwc
+```
 ## Canvas.course.name
 returns the current course name.
 
@@ -480,6 +489,15 @@ Returns the Canvas user_id of the launching user.
 
 ```
 420000000000042
+```
+## vnd.instructure.User.uuid [duplicates User.uuid]
+Returns the Canvas user_uuid of the launching user.
+
+**Availability**: *when launched by a logged in user*  
+
+
+```
+N2ST123dQ9zyhurykTkBfXFa3Vn1RVyaw9Os6vu3
 ```
 ## Canvas.user.prefersHighContrast
 Returns the users preference for high contrast colors (an accessibility feature).
