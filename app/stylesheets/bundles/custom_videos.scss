@@ -2,3 +2,33 @@
  	Place all the styles related to the matching controller here.
   	They will automatically be included in application.css.
 */
+
+.videos img {
+	height: 117.5px;
+	width: 220px;
+}
+
+.video-div {
+	cursor: pointer;
+}
+
+.video-div h3:hover {
+	color: #008EE2;
+}
+
+.video-div h3 {
+	display: inline-block;
+}
+
+.video-player-div {
+	padding-top: 100px;
+}
+
+.video-player-div video {
+	border: 1px solid #008EE2;
+	width: 100%;
+}
+
+.student-videos {
+	display: none;
+}
