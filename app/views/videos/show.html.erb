@@ -1,22 +1,96 @@
-<h1>Instructional Videos Page</h1>
-<hr>
+<div class="container-fluid videos">
+	<div class="page-header">
+		<h1>
+			<span class="student-videos">Student</span> 
+			<span class="instructor-videos">Instructor</span>
+			Videos</h1>	
+	</div>
 
-<div class="facilitator-videos">
-	<h3>Facilitator Videos</h3>
-	<ul>
-		<li>Video 1</li>
-		<li>Video 2</li>
-		<li>Video 3</li>
-	</ul>
+	<div class="page-content content-box">
+		<div class="grid-row">
+			<div class="col-sm-6 student-videos">
+				<div id="student-canvas" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Canvas Overview</h3>
+				</div>
+				<div id="student-assignments" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Assignments Overview</h3>
+				</div>
+				<div id="student-communication" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Communication Overview</h3>
+				</div>
+				<div id="student-grades" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Grades Overview</h3>
+				</div>
+				<div id="student-discussions" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Discussions Overview</h3>
+				</div>
+			</div>
+
+			<div class="col-sm-6 instructor-videos">
+				<div id="instructor-canvas" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Canvas Overview</h3>
+				</div>
+				<div id="instructor-assignments" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Assignments Overview</h3>
+				</div>
+				<div id="instructor-quiz1" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Quiz Creation - Settings</h3>
+				</div>
+				<div id="instructor-quiz2" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Quiz Creation - Questions</h3>
+				</div>
+				<div id="instructor-people" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>People Overview</h3>
+				</div>
+				<div id="instructor-gradebook" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Gradebook Overview</h3>
+				</div>				
+				<div id="instructor-courses" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Courses Overview</h3>
+				</div>				
+				<div id="instructor-calender" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Calender Overview</h3>
+				</div>
+				<div id="instructor-analytics" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Analytics Overview</h3>
+				</div>
+				<div id="instructor-syllabus" class="row video-div">
+					<img src="/custom/video-placeholder-img.jpg">
+					<h3>Syllabus Overview</h3>
+				</div>
+			</div>
+
+			<div class="col-sm-6">
+				<div class="video-player-div student-videos">	
+					<video class="video-player" src="/custom/student/videos/200 - Canvas Overview for Students.mp4" poster="/custom/student/posters/student-200-canvas-overview.png" controls></video>
+				</div>
+
+				<div class="video-player-div instructor-videos">	
+					<video class="video-player" src="/custom/instructor/videos/500 - Canvas Interface Overview.mp4" poster="/custom/instructor/posters/instructor-500-canvas-interface-overview.png" controls></video>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+ 	
+
+
+	
 </div>
-
-<div class="student-videos">
-	<h3>Student Videos</h3>
-	<ul>
-		<li>Video 1</li>
-		<li>Video 2</li>
-		<li>Video 3</li>
-	</ul>
-</div>
-
 <% css_bundle :custom_videos %>
+<% js_bundle :custom_videos %> 

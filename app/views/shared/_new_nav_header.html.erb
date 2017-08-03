@@ -141,7 +141,7 @@
             </a>
           </li>
 
-          <li class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/support') %>">
+          <!-- <li id="bug-support" class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/support') %>">
             <a id="global_nav_conversations_link" href="/support" class="ic-app-header__menu-list-link">
               <div class="menu-item-icon-container" aria-hidden="true">
                 <%= svg_icon :bug %>
@@ -151,13 +151,26 @@
                 <%= t('Bug Support') %>
               </div>
             </a>
+          </li> -->
+
+          <li id="reports" class="menu-item ic-app-header__menu-list-item <%= ' ic-app-header__menu-list-item--active' if active_path?('/reports') %>">
+            <a id="global_nav_conversations_link" href="/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <%= svg_icon :reports %>
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                <%= t('Reports') %>
+              </div>
+            </a>
           </li>
 
           <!-- Custom Styles for SVG's -->
           <style type="text/css">
             .ic-app-header__menu-list-item--active .ic-icon-svg--resources,
             .ic-app-header__menu-list-item--active .ic-icon-svg--videos,
-            .ic-app-header__menu-list-item--active .ic-icon-svg--bug {
+            .ic-app-header__menu-list-item--active .ic-icon-svg--bug,
+            .ic-app-header__menu-list-item--active .ic-icon-svg--reports {
               fill: #008EE2;
             }
           </style>
