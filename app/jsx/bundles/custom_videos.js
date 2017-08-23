@@ -2,6 +2,9 @@ import $ from 'jquery'
 
 console.log('videos loaded');
 
+var roles = ENV.current_user_roles;
+console.log(roles);
+
 var videoStorage = {
 	student: {
 		canvas: {
