@@ -5,6 +5,11 @@ console.log('videos loaded');
 var roles = ENV.current_user_roles;
 console.log(roles);
 
+if(roles.length > 1){
+	$('.student-videos').hide();
+	$('.instructor-videos').show();
+} 
+
 var videoStorage = {
 	student: {
 		canvas: {
