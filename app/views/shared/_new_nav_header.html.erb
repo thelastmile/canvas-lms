@@ -175,7 +175,12 @@
             .ic-app-header__menu-list-item--active .ic-icon-svg--reports {
               fill: #008EE2;
             }
+            #reports {
+              display: none;
+            }
           </style>
+
+          <% js_bundle :custom_home %> 
 
           <!-- End Custom Sidebar Section -->
           <% unless @current_user.nil? %>
