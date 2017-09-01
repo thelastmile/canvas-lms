@@ -5,7 +5,7 @@ console.log('videos loaded');
 var roles = ENV.current_user_roles;
 console.log(roles);
 
-if(roles.length > 1){
+if(roles.indexOf('student') === -1){
 	$('.student-videos').hide();
 	$('.instructor-videos').show();
 } 
@@ -80,6 +80,7 @@ var videoStorage = {
 // on click event that swaps video and posters on video element
 $('.video-div').on('click', function(e){
 	var objID = $(this).attr('id');
+	console.log(objID)
 
 	// splits the id by role and video to change attributes in video player
 	var role = objID.split('-')[0];
