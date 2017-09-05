@@ -26,6 +26,8 @@ import showMoreTemplate from 'jst/dashboard/show_more_link'
 import DashboardOptionsMenu from 'jsx/dashboard_card/DashboardOptionsMenu'
 import 'jquery.disableWhileLoading'
 
+$('span#dynamic-name').text(ENV.current_user.display_name);
+
 if (ENV.DASHBOARD_SIDEBAR_URL) {
   const rightSide = $('#right-side')
   rightSide.disableWhileLoading($.get(ENV.DASHBOARD_SIDEBAR_URL, (html) => {
