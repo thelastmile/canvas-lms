@@ -20,6 +20,11 @@
 <% css_bundle :dashboard %>
 <% js_bundle :dashboard %>
 
+<% js_bundle :dashboard_tour %>
+
+<!-- adding hopscotch.css and hopscotch.js to dashboard page -->
+<link rel="stylesheet" type="text/css" href="/custom/dist/css/hopscotch.css">
+
 <% content_for :auto_discovery do %>
   <% if @current_user %>
       <%= auto_discovery_link_tag(:atom, feeds_user_format_path(@current_user.feed_code, :atom), {:title => t('user_atom_feed', "User Atom Feed (All Courses)")}) %>
@@ -65,13 +70,16 @@
   </div>
 
   <div class="welcome-page-main">
-    <video class="video-player" src="/custom/student/videos/200 - Canvas Overview for Students.mp4" poster="/custom/student/posters/student-200-canvas-overview.png" controls></video>
+    <video class="video-player" src="/custom/student/videos/200 - Canvas Overview for Students.mp4" poster="/custom/student/posters/student-200-canvas-overview.png" controls></video>   
   </div>
 
   <div class="welcome-page-footer">
     <h3>What would you like to do now?</h3>
-    <button class="btn btn-success">SKIP TOUR AND GET STARTED</button><button class="btn btn-danger">GO ON A TOUR OF CANVAS</button>
+    <button class="btn btn-success skip-btn">SKIP TOUR AND GET STARTED</button><button class="btn btn-danger tour-btn">GO ON A TOUR OF CANVAS</button>
   </div>
 </div>
+
+<script type="text/javascript" src="/custom/dist/js/hopscotch.js"></script>
+
 
 
