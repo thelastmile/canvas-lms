@@ -64,18 +64,28 @@
   <%= render :partial => 'shared/dashboard_card' %>
 </div>
 
-<div class="welcome-page">
-  <div class="welcome-page-header">
-    <h1>Welcome <span id="dynamic-name"></span>!</h1>  
-  </div>
+<div class="welcome-page-outer">
+  <div class="welcome-page-inner">
+    <div class="header-main-wrapper">
+      <div class="welcome-page-header">
+        <h1>Welcome <span id="dynamic-name"></span>!</h1>  
+      </div>
 
-  <div class="welcome-page-main">
-    <video class="video-player" src="/custom/student/videos/200 - Canvas Overview for Students.mp4" poster="/custom/student/posters/student-200-canvas-overview.png" controls></video>   
-  </div>
+      <div class="welcome-page-main">
+        <video class="video-player" src="/custom/student/videos/200 - Canvas Overview for Students.mp4" poster="/custom/student/posters/student-200-canvas-overview.png" controls></video>   
+      </div>
+    </div>
 
-  <div class="welcome-page-footer">
-    <h3>What would you like to do now?</h3>
-    <button class="btn btn-success skip-btn">SKIP TOUR AND GET STARTED</button><button class="btn btn-danger tour-btn">GO ON A TOUR OF CANVAS</button>
+    <div class="welcome-page-footer">
+      <h3>What would you like to do now?</h3>
+      <button class="btn btn-danger skip-btn">SKIP TOUR AND GO HOME!</button><button class="btn btn-primary tour-btn">GO ON A TOUR OF CANVAS</button><br />
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="">
+          Don't show this page again
+        </label>
+      </div>
+    </div>
   </div>
 </div>
 

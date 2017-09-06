@@ -45,12 +45,10 @@
 
 
 // custom styles
-.welcome-page {
-  background-color: #333;
-  color: white;
+.welcome-page-outer {
+  background-color: #fff;
   height: 100%;
   left: 0;
-  opacity: .8;
   padding: 20px;
   position: absolute;
   text-align: center;
@@ -58,16 +56,44 @@
   width: 100%;
 }
 
-.welcome-page-main {
-  padding-top: 50px;
+.welcome-page-inner {
+  background-color: #fff;
+  color: #333;
+  height: 100%;
+  opacity: .8;
+}
+
+.welcome-page-inner .header-main-wrapper{
+  border: 1px solid #333;
+  margin: 0 15%;
+}
+
+.welcome-page-header,
+.welcome-page-main,
+.welcome-page-footer {
+  padding: 25px;
+}
+
+.welcome-page-inner .video-player {
+  border: 1px solid #333;
+  height: 300px;
 }
 
 .welcome-page-footer {
-  border: 1px solid #fff;
-  padding: 50px;
+  border: 1px solid #333;
   margin: 50px 15%;
 }
 
 .welcome-page-footer .btn {
   margin: 25px 35px;
 }
+
+.welcome-page-inner .form-check {
+  text-align: right;
+}
+
+.welcome-page-inner .form-check-input {
+  margin-right: 5px;
+  margin-top: 0;
+}
+

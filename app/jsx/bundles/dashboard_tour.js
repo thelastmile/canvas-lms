@@ -2,6 +2,8 @@ import $ from 'jquery'
 
 console.log('getting ready for tour');
 
+const $rightSideBar = $('.with-right-side #right-side-wrapper');
+$rightSideBar.hide();
 // Define the tour!
 var tour = {
   id: "welcome-page-tour",
@@ -52,7 +54,8 @@ var tour = {
 };
 
 $('.skip-btn').on('click', function(){
-	$('.welcome-page').hide();
+	$('.welcome-page-outer').fadeOut();
+  $rightSideBar.show();
 })
 
 $('.tour-btn').on('click', function(){
