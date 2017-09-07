@@ -2,8 +2,13 @@ import $ from 'jquery'
 
 console.log('getting ready for tour');
 
-const $rightSideBar = $('.with-right-side #right-side-wrapper');
-$rightSideBar.hide();
+$('.with-right-side #right-side-wrapper').hide();
+
+if( localStorage.getItem('opt-out') ){
+  $('.welcome-page-outer').hide();
+  $('.with-right-side #right-side-wrapper').show();
+}
+
 // Define the tour!
 var tour = {
   id: "welcome-page-tour",
@@ -53,11 +58,26 @@ var tour = {
   ]
 };
 
+const inOrOut = localStorage.getItem('opt-out');
+console.log(inOrOut);
+
 $('.skip-btn').on('click', function(){
 	$('.welcome-page-outer').fadeOut();
-  $rightSideBar.show();
+  $('.with-right-side #right-side-wrapper').show();
+
+  showTourAgain();
 })
 
 $('.tour-btn').on('click', function(){
 	hopscotch.startTour(tour);	
+  showTourAgain();
 });
+
+function showTourAgain(){
+  // if tour opt out checkbox is checked, add a boolean to local storage
+  if( $('#select-tour').is(':checked') ){
+    localStorage.setItem('opt-out', true);
+    return false;
+  }
+  return true;
+}

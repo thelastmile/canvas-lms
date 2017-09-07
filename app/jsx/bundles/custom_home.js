@@ -4,6 +4,7 @@ var roles = ENV.current_user_roles;
 
 if(roles.indexOf('student') === -1){
 	$('#reports').show();
-	$('.welcome-page').hide();
+	$('.with-right-side #right-side-wrapper').show();
+	$('.welcome-page-outer').hide();
 }
 
