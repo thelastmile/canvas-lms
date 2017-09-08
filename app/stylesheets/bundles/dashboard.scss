@@ -61,6 +61,14 @@
   color: #333;
   height: 100%;
   opacity: .8;
+  position: relative;
+}
+
+img#tlm-logo {
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .welcome-page-inner .header-main-wrapper{
