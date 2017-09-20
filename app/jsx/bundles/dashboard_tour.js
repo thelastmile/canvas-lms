@@ -55,7 +55,12 @@ var tour = {
       target: "global_nav_videos_link",
       placement: "right"
     }
-  ]
+  ],
+  onEnd: function(){
+    console.log('tour over');
+    $('.welcome-page-outer').hide();
+    $('.with-right-side #right-side-wrapper').show();
+  }
 };
 
 const inOrOut = localStorage.getItem('opt-out');

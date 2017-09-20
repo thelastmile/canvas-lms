@@ -20,6 +20,7 @@ import I18n from 'i18n!new_nav'
 import React from 'react'
 import SVGWrapper from 'jsx/shared/SVGWrapper'
 import PreventDefault from 'compiled/fn/preventDefault'
+import $ from 'jquery'
 
   var ProfileTray = React.createClass({
 
@@ -32,6 +33,7 @@ import PreventDefault from 'compiled/fn/preventDefault'
     },
 
     render() {
+      const studentView = $('body').hasClass('student');
       return (
         <div className='profile-tray'>
           <div className="ic-NavMenu__header ic-NavMenu__header--is-profile" id="global_nav_profile_header">
@@ -79,12 +81,14 @@ import PreventDefault from 'compiled/fn/preventDefault'
                 <a href="/profile" className="ic-NavMenu-list-item__link">{I18n.t('Profile')}</a>
               </li>
             }
-            <li className="ic-NavMenu-list-item">
-              <a href="/profile/settings" className="ic-NavMenu-list-item__link">{I18n.t('Settings')}</a>
-            </li>
-            <li className="ic-NavMenu-list-item">
-              <a href="/profile/communication" className="ic-NavMenu-list-item__link">{I18n.t('Notifications')}</a>
-            </li>
+            { !studentView && <li className="ic-NavMenu-list-item">
+                <a href="/profile/settings" className="ic-NavMenu-list-item__link">{I18n.t('Settings')}</a>
+              </li>
+            }
+            { !studentView && <li className="ic-NavMenu-list-item">
+                <a href="/profile/communication" className="ic-NavMenu-list-item__link">{I18n.t('Notifications')}</a>
+              </li>
+            }
             <li className="ic-NavMenu-list-item">
               <a href="/files" className="ic-NavMenu-list-item__link">{I18n.t('Files')}</a>
             </li>
