@@ -10,15 +10,6 @@ if(roles.indexOf('student') === -1){
 	$('body').addClass('student');
 }
 
-const settings = $('body.student a[href="/profile/settings"]');
-console.log(settings);
-
-$('#global_nav_profile_link img').on('click', function(){
-	console.log('hello');
-	$('.student a[href="/profile/settings]').hide();	
-});
-
-
 
 
 
