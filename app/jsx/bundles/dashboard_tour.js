@@ -58,8 +58,7 @@ var tour = {
   ],
   onEnd: function(){
     console.log('tour over');
-    $('.welcome-page-outer').hide();
-    $('.with-right-side #right-side-wrapper').show();
+    hideTour();
   }
 };
 
@@ -67,11 +66,9 @@ const inOrOut = localStorage.getItem('opt-out');
 console.log(inOrOut);
 
 $('.skip-btn').on('click', function(){
-	$('.welcome-page-outer').fadeOut();
-  $('.with-right-side #right-side-wrapper').show();
-
+	hideTour();
   showTourAgain();
-})
+});
 
 $('.tour-btn').on('click', function(){
 	hopscotch.startTour(tour);	
@@ -85,4 +82,9 @@ function showTourAgain(){
     return false;
   }
   return true;
+}
+
+function hideTour(){
+    $('.welcome-page-outer').fadeOut();
+    $('.with-right-side #right-side-wrapper').show();
 }
