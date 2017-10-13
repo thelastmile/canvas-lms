@@ -92,7 +92,7 @@ import $ from 'jquery'
             <li className="ic-NavMenu-list-item">
               <a href="/files" className="ic-NavMenu-list-item__link">{I18n.t('Files')}</a>
             </li>
-            {this.props.eportfoliosEnabled &&
+            { !studentView && this.props.eportfoliosEnabled &&
               <li className="ic-NavMenu-list-item">
                 <a href={ studentView ? '#' : '/dashboard/eportfolios'} className="ic-NavMenu-list-item__link">{I18n.t('ePortfolios')}</a>
               </li>
